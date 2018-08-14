@@ -1,0 +1,33 @@
+<!doctype html>
+<title>A short quiz</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_lulu.css')}}'>
+
+<div class="topnav">
+  <a class="active" href="#">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+</div>
+
+<div class=page>
+  <h1>Ticker Lookup App</h1>
+  <div class=metanav>
+
+    <h4>
+      Please Enter the ticker symbol
+    </h4>
+
+    <form id='userinfoform_lulu' method='post' action='index_lulu' >
+      <p>Name: <input type='text' name='name_lulu' /></p>
+      <p>
+      <input type="checkbox" name='close_price'/>Closing price<br>
+      <input type="checkbox" name='high_price'/>high price<br>
+      <input type="checkbox" name='open_price'/>Opening price<br>
+      <input type="checkbox" name='low_price'/>low price<br>
+      </p>
+      <p><input type='submit' value='Submit' /></p>
+    </form>
+
+  </div>
+</div>
+</html>
