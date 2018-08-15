@@ -14,7 +14,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-@app.route('/index_lulu',methods=['GET','POST'])
+@app.route('/index',methods=['GET','POST'])
 def index_lulu():
 	nquestions=5
 	if request.method == 'GET':
