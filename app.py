@@ -16,15 +16,13 @@ app = Flask(__name__)
 
 @app.route('/index',methods=['GET','POST'])
 def index_lulu():
-	nquestions=5
 	if request.method == 'GET':
-		return render_template('userinfo_lulu.html',num=nquestions)
+		return render_template('userinfo_lulu.html')
 	else:
 		n1 = request.form['name_lulu']
 
 		api_url = 'https://www.quandl.com/api/v3/datasets/WIKI/%s.csv' % n1
-		df = pd.read_csv(api_url)
-		df = df.head(100)
+		df = pd.read_csv(api_url, nrows=100)
 		aapl_dates = np.array(df['Date'], dtype=np.datetime64)
 
 
